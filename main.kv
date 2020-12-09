@@ -1,0 +1,242 @@
+<Dashboard>:
+    md_bg_color: .95,.95,.95,.95
+    elevation: 1
+    LeftBar:
+        orientation: "vertical"
+        size_hint_x: .15
+        Label:
+            size_hint_y: .1
+            text: 'Cash Market'
+            font_size: 20
+            bold: True
+        Label:
+            size_hint_y: .1
+        BoxLayout:
+            size_hint_y: .4
+            orientation: "vertical"
+            HoverIconList:
+                bold: True
+                text: "Dashboard"
+                LeftIcon:
+                    icon: "apps"
+            HoverIconList:
+                text: "Orders"
+                LeftIcon:
+                    icon: "basket-plus-outline"
+            HoverIconList:
+                text: "Products"
+                LeftIcon:
+                    icon: "gift-outline"
+            HoverIconList:
+                text: "Reports"
+                LeftIcon:
+                    icon: "finance"
+            HoverIconList:
+                text: "Messages"
+                LeftIcon:
+                    icon: "email"
+            HoverIconList:
+                text: "Customers"
+                LeftIcon:
+                    icon: "account-supervisor"
+        Label:
+            size_hint_y: .2
+        Label:
+            size_hint_y: .1
+            markup: True
+            text: '[size=20][b]   Cash Market[/b][/size]\n [size=15]All Rights Reserved[/size]'
+        Widget:
+            size_hint_y: .1
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: .85
+        MDBoxLayout:
+            padding: 20, 20, 20, 0
+            size_hint_y: .08
+            md_bg_color: 1,1,1,1
+            Widget:
+                size_hint_x: .8
+            Profile:
+                size_hint_x: .07
+            MDLabel:
+                markup: True
+                size_hint_x: .13
+                text: '[b]Lazarus Muya[/b]\n Admin'
+        MDSeparator:
+        BoxLayout:
+            size_hint_y: .22
+            GridLayout:
+                cols: 3
+                spacing: 10
+                padding: 5
+                MDCard:
+                    size_hint: 1, 1
+                    radius: 10, 10
+                    elevation: -1
+                    padding: 15
+                    BoxLayout:
+                        size_hint_x: .7
+                        orientation: 'vertical'
+                        Label:
+                        MDLabel:
+                            text: "Total Sales"
+                        MDLabel:
+                            text: "$450.000"
+                            bold: True
+                            color: 0,0,1,1
+                        MDLabel:
+                            markup: True
+                            text: "[b]+45%[/b] this week"
+                        Label:
+                    BoxLayout:
+                        size_hint_x: .3
+                        MDIconButton:
+                            icon: "finance"
+                            user_font_size: '50sp'
+                            theme_text_color: "Custom"
+                            text_color: 0,0,1,1
+                            pos_hint: {'y': .2}
+                MDCard:
+                    size_hint: 1, 1
+                    radius: 10, 10
+                    elevation: -1
+                    padding: 15
+                    BoxLayout:
+                        size_hint_x: .7
+                        orientation: 'vertical'
+                        Label:
+                        MDLabel:
+                            text: "Total Revenue"
+                        MDLabel:
+                            text: "$920.000"
+                            bold: True
+                            color: 0,0,1,1
+                        MDLabel:
+                            markup: True
+                            text: "[b]+60%[/b] this week"
+                        Label:
+                    BoxLayout:
+                        size_hint_x: .3
+                        MDIconButton:
+                            icon: "currency-usd-circle-outline"
+                            user_font_size: '50sp'
+                            theme_text_color: "Custom"
+                            text_color: 0,0,1,1
+                            pos_hint: {'y': .2}
+                MDCard:
+                    size_hint: 1, 1
+                    radius: 10, 10
+                    elevation: -1
+                    padding: 15
+                    BoxLayout:
+                        size_hint_x: .7
+                        orientation: 'vertical'
+                        Label:
+                        MDLabel:
+                            text: "Today's Visitors"
+                        MDLabel:
+                            text: "2,560"
+                            bold: True
+                            color: 0,0,1,1
+                        MDLabel:
+                            markup: True
+                            text: "[b]+20%[/b] this week"
+                        Label:
+                    BoxLayout:
+                        size_hint_x: .3
+                        MDIconButton:
+                            icon: "account-supervisor"
+                            user_font_size: '50sp'
+                            theme_text_color: "Custom"
+                            text_color: 0,0,1,1
+                            pos_hint: {'y': .2}
+
+        BoxLayout:
+            size_hint_y: .7
+            padding_x: 10
+            BoxLayout:
+                size_hint_x: .8
+                orientation: 'vertical'
+                padding: 10, 0, 0, 0
+                BoxLayout:
+                    size_hint_y: .1
+                    padding: 0,0,0,10
+                    spacing: 20
+                    MDLabel:
+                        text: "Recent Orders"
+                        bold: True
+                        size_hint_x: .4
+                    MDTextFieldRound:
+                        hint_text: "search"
+                        size_hint_x: .3
+                        icon_left: "magnify"
+                        normal_color: 1,1,1,1
+                        color_active: 1,1,1,1
+                    MDDropDownItem:
+                        size_hint_x: .3
+                        text: "This week"
+
+                BoxLayout:
+                    size_hint_y: .9
+                    id: display
+            BoxLayout:
+                size_hint_x: .2
+                orientation: 'vertical'
+                padding: 10
+                spacing: 10
+                MDLabel:
+                    size_hint_y: .06
+                    text: "Sales by Category"
+                    bold: True
+                MDCard:
+                    id: pchart
+                    size_hint: 1, .45
+                    orientation: 'vertical'
+                    radius: 10, 10
+                    elevation: -1
+                MDCard:
+                    size_hint: 1, .45
+                    orientation: 'vertical'
+                    radius: 10, 10
+                    elevation: -1
+                    padding: 20
+                    MDLabel:
+                        text: "Delivery Progress"
+                        bold: True
+                    Widget:
+                    MDLabel:
+                        text: "iPhone X           60%"
+                    MDProgressBar:
+                        value: 60
+                        color: 0,0,1,1
+                    MDLabel:
+                        text: "iPhone X           40%"
+                    MDProgressBar:
+                        value: 40
+                        color: 0,0,1,1
+                    MDLabel:
+                        text: "iPhone X           20%"
+                    MDProgressBar:
+                        value: 20
+                        color: 0,0,1,1
+                    Widget:
+
+
+<LeftBar@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 0,0,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<LeftIcon@IconLeftWidget>:
+    theme_text_color: "Custom"
+    text_color: 0,.8,0,1
+
+<Profile@FloatLayout>:
+    canvas.before:
+        Ellipse:
+            source: "mwas.jpg"
+            size: 50, 50
+            pos: self.pos
